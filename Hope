@@ -28,3 +28,5 @@ cout<<g;
 
 return 0;   
 }
+
+Get-PnpDevice -PresentOnly | Where-Object { $_.Class -eq "Ports" } | ForEach-Object { $_.DeviceID, $_.FriendlyName }
