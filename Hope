@@ -30,3 +30,5 @@ return 0;
 }
 
 Get-PnpDevice -PresentOnly | Where-Object { $_.Class -eq "Ports" } | ForEach-Object { $_.DeviceID, $_.FriendlyName }
+
+wmic path Win32_PnPEntity where "Name like '%USB%'" get Caption, Description, PNPDeviceID
