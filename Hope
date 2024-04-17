@@ -1,36 +1,16 @@
-#include <iostream>
-#include <string>
-using namespace std;
-int str_count(string x, string y){
-  int c=0;
-  int cc=0;
-  int co=0;
-   for(int i=0; i<x.length(); i++){
-       c+= (int)x[i];
-   }
-   for(int j=0; j<(y.length()+1)-x.length(); j++){
-      for(int i=0; i<x.length(); i++){
-       cc+=(int)y[i+j];
-   }
-   if(c==cc){
-      co++;
-      cc=0;
-   }
-   }
-   return co;
-}
+https://youtu.be/vLwMl9qK4T8?si=jQE1teAAjvbHI-EC
 
-int main(){
-    
-int g= str_count("Kar", "Kar Hatem is Kar");
+https://youtu.be/-cszqNrFoqk?si=5FQGuH0QlC8XaVr8
 
-cout<<g;
+https://youtu.be/A9WLYbE0p-I?si=Io549B0dzJgwDr4n
 
-return 0;   
-}
+https://youtu.be/kIN5-OYAWGs?si=dRwBpIyUp1vo_Q5d
 
-Get-PnpDevice -PresentOnly | Where-Object { $_.Class -eq "Ports" } | ForEach-Object { $_.DeviceID, $_.FriendlyName }
+https://youtu.be/XxBZw2FEdK0?si=1a54ZSBqhtqW35L3
 
-wmic path Win32_PnPEntity where "Name like '%USB%'" get Caption, Description, PNPDeviceID
+https://youtu.be/bOG8667yePY?si=3E5Bj1v-ZFcfDfvv
 
-Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Enum\USB | Select-Object DeviceID, FriendlyName
+https://youtu.be/LrEvoKI07Ww?si=LDigM3fVIMuB3zHl
+
+https://youtu.be/z7SO6CF3guE?si=SgD-QubQ-UeNE3tI
+
