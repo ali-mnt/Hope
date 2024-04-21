@@ -14,3 +14,45 @@ https://youtu.be/LrEvoKI07Ww?si=LDigM3fVIMuB3zHl
 
 https://youtu.be/z7SO6CF3guE?si=SgD-QubQ-UeNE3tI
 
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  // File to be modified
+  string filename = "my_file.txt";
+
+  // Character to be removed
+  char char_to_remove = 'x';
+
+  // Read the entire file content into a string
+  string file_content;
+  ifstream input_file(filename);
+  if (input_file.is_open()) {
+    while (getline(input_file, file_content)) {
+      // Add your code here to handle the content of each line
+      // (optional, for example, removing the character)
+      file_content.erase(remove(file_content.begin(), file_content.end(), char_to_remove), file_content.end());
+    }
+    input_file.close();
+  } else {
+    cerr << "Error opening file: " << filename << endl;
+    return 1;
+  }
+
+  // Open the file for output (overwrite)
+  ofstream output_file(filename);
+  if (output_file.is_open()) {
+    // Write the modified content to the file
+    output_file << file_content;
+    output_file.close();
+    cout << "Character '" << char_to_remove << "' removed from " << filename << endl;
+  } else {
+    cerr << "Error opening file for writing: " << filename << endl;
+    return 1;
+  }
+
+  return 0;
+}
