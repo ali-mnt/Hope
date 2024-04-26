@@ -1,58 +1,242 @@
-https://youtu.be/vLwMl9qK4T8?si=jQE1teAAjvbHI-EC
-
-https://youtu.be/-cszqNrFoqk?si=5FQGuH0QlC8XaVr8
-
-https://youtu.be/A9WLYbE0p-I?si=Io549B0dzJgwDr4n
-
-https://youtu.be/kIN5-OYAWGs?si=dRwBpIyUp1vo_Q5d
-
-https://youtu.be/XxBZw2FEdK0?si=1a54ZSBqhtqW35L3
-
-https://youtu.be/bOG8667yePY?si=3E5Bj1v-ZFcfDfvv
-
-https://youtu.be/LrEvoKI07Ww?si=LDigM3fVIMuB3zHl
-
-https://youtu.be/z7SO6CF3guE?si=SgD-QubQ-UeNE3tI
-
-#include <iostream>
-#include <fstream>
-#include <string>
-
-using namespace std;
-
-int main() {
-  // File to be modified
-  string filename = "my_file.txt";
-
-  // Character to be removed
-  char char_to_remove = 'x';
-
-  // Read the entire file content into a string
-  string file_content;
-  ifstream input_file(filename);
-  if (input_file.is_open()) {
-    while (getline(input_file, file_content)) {
-      // Add your code here to handle the content of each line
-      // (optional, for example, removing the character)
-      file_content.erase(remove(file_content.begin(), file_content.end(), char_to_remove), file_content.end());
-    }
-    input_file.close();
-  } else {
-    cerr << "Error opening file: " << filename << endl;
-    return 1;
-  }
-
-  // Open the file for output (overwrite)
-  ofstream output_file(filename);
-  if (output_file.is_open()) {
-    // Write the modified content to the file
-    output_file << file_content;
-    output_file.close();
-    cout << "Character '" << char_to_remove << "' removed from " << filename << endl;
-  } else {
-    cerr << "Error opening file for writing: " << filename << endl;
-    return 1;
-  }
-
-  return 0;
-}
+Vocabulary
+==============
+Day 1
+1-showcase
+2-calligraphy  
+3-admirable
+4-lable
+5-admire              
+6-literal
+7-cabinet
+8- trade fair 
+9-book fair
+10-kitchen
+11-legacy
+12-interchangeably
+13-suffer - suffering
+14-inflict
+15-pillow
+16-conflict
+17-weapon
+18-mass
+19-destruction
+20-sue
+21-omen
+22-envy
+23-stove
+24-embargo
+25-seek
+26-chasm
+27-paradise - heaven
+28-pronounce
+29-spell
+30-expose
+31-exposed to
+32-extend
+33-snippet
+34-tour
+35-remember
+36-scene
+37-half
+38-quarter
+39-betrayal
+40-treason
+41-swear
+42-eliminate
+43-trumpet
+44-settle
+45-tone
+46-Purple
+47-chef
+48-devil
+49-satan
+50-mandate
+51-anxious4
+52-vice
+53-vice versa
+54-bankrupt
+55-bailout
+56-carpet
+57-rug
+58-cloud
+59-owe
+60-woe
+61-asylum
+62-broad
+63-intentional
+64-intention
+65-funding
+66-mandatory
+67-minimum
+68-maximum
+69-rehabilitation
+70-habilitation
+71-ballot
+72-decision
+73-rack
+74-corrupt
+75-corruption
+76-rotten
+77-connotation
+78-connote
+79-moral decay
+80-emphasize
+81-ethic
+82-supervision.
+83-pursue
+84-inspire
+85-career
+86-devise
+87-adequate
+88-country
+89-glory
+90-olive
+91-sweet
+92-taste
+93-shape
+94-associate
+95-respond
+96-contribute
+97-incarceration
+98-prison
+99-jail
+100-confinement
+101-distinct
+102-meaning
+103-term
+104-item
+105-convicted
+106-await
+107-analogy
+108-argue
+109-filthy
+110-sanitation
+111-frankly
+112-labor
+113-statistics
+114-tremendous
+115-crash
+116-mission
+117-emissiom
+118-net
+119-plague
+120-fiction
+121-textual
+Day 2
+1-truncate
+2-bill
+3-jug
+4-pour
+5-teapot
+6-grave
+7-nasty
+8-proposal
+9-mantle
+10-blame
+11-captive
+12-tunnel
+13-collision
+14-collide
+15-attempt
+16-dump
+17-liquid
+18-laundry
+19-detergent
+20-clothes
+21-clothe
+22-apply
+23-individual
+24-conductive
+25-conductivity
+26-intervention
+27-cup
+28-drunk
+29-abolition
+30-slavery
+31-treat
+32-container
+33-exaggeration
+34-pound
+35-beat
+36-rush
+37-district
+38-deposition
+39-possession
+40-manuscript
+41-museum
+42-mosque
+43-sculpt
+44-dagger
+45-clue
+46-soldier
+47ambiguous
+48-simile
+49-resilience
+50-fragility
+51-racism
+52-unbelievable
+53-intolerable
+54-Engagement
+55-elegant
+56-ego
+57-grief
+58-successor
+59-turmoil
+60-sore
+61-confrontation
+62-desert
+63-dessert
+64-bragging
+65-academic
+66-achievement
+67-drugs
+68-message
+69-massage
+70-attract
+71-attention
+72-slap
+73-greet
+74-screw
+75-bolt
+76-organ
+77-organic
+78-organize
+79-organization
+80-desk
+81-disk
+82-lung
+83-effectiveness
+84-efficiency
+85-oak
+86-chaos
+87-adequate
+88-chaotic
+89-disaster
+90-gulf
+91-greed
+92-trait
+93-retreat
+94-enough
+95-clone
+96-clown
+97-absolutely
+98-absolute
+99-biased
+100-modest
+day 3
+1-protest
+2-demonstration
+3-slogan
+4-justice
+5-peace
+6-disruptive
+7-disruption
+8-cartridge
+9-faulty
+10-imperfection
+11-spare 
+12-outages
+13-lad
+14-elderly
+15-aging
+16-commerce
